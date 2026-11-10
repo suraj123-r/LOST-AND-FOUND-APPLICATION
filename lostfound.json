@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "type": "lost",
+      "title": "aadhar",
+      "description": "i lost that in college",
+      "category": "Documents",
+      "location": "3rd floor",
+      "item_date": "2026-09-02",
+      "contact_name": "Suraj",
+      "contact_email": "surajrajesh981@gmail.com",
+      "contact_phone": "8660994133",
+      "status": "resolved",
+      "created_at": "2026-09-19T12:46:09.300Z"
+    }
+  ],
+  "nextId": 2
+}

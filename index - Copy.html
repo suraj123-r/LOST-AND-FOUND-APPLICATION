@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lost and Found Application</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🔎 Lost &amp; Found</h1>
+  <p>Report a lost item or something you found, and help reunite people with their belongings.</p>
+</header>
+
+<main>
+  <section class="report-section">
+    <h2>Report an Item</h2>
+    <form id="itemForm">
+      <div class="form-row">
+        <label>
+          Type
+          <select id="type" required>
+            <option value="lost">Lost</option>
+            <option value="found">Found</option>
+          </select>
+        </label>
+        <label>
+          Category
+          <select id="category">
+            <option value="Electronics">Electronics</option>
+            <option value="Documents">Documents</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Bags">Bags</option>
+            <option value="Keys">Keys</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+      </div>
+
+      <label>
+        Title
+        <input type="text" id="title" placeholder="e.g. Black wallet" required>
+      </label>
+
+      <label>
+        Description
+        <textarea id="description" placeholder="Describe the item, any identifying marks etc."></textarea>
+      </label>
+
+      <div class="form-row">
+        <label>
+          Location
+          <input type="text" id="location" placeholder="e.g. Library, 2nd floor">
+        </label>
+        <label>
+          Date
+          <input type="date" id="item_date">
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label>
+          Your Name
+          <input type="text" id="contact_name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" id="contact_email">
+        </label>
+        <label>
+          Phone
+          <input type="tel" id="contact_phone">
+        </label>
+      </div>
+
+      <button type="submit">Submit Report</button>
+    </form>
+  </section>
+
+  <section class="browse-section">
+    <h2>Browse Items</h2>
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search by keyword...">
+      <select id="filterType">
+        <option value="">All Types</option>
+        <option value="lost">Lost</option>
+        <option value="found">Found</option>
+      </select>
+      <select id="filterStatus">
+        <option value="">All Status</option>
+        <option value="open">Open</option>
+        <option value="resolved">Resolved</option>
+      </select>
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="itemsList" class="items-list"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Lost and Found Application</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
